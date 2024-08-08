@@ -34,6 +34,10 @@ const initDb = async _=> {
     sequelize.sync()
     // sequelize.sync({ alter: true })
     // sequelize.sync({ force: true })
+
+    await User.findOrCreate({
+        where: { user_name: 'root', user_email: 'root@gmail.com', user_password: 'root', user_role: 'approving', user_account_status: 'enabled'}
+    });
 }
 
 

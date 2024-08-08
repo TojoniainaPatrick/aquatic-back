@@ -6,7 +6,7 @@ module.exports = app => {
 
         const notification_id = req.params.notification_id
         
-        await Notification.update( req.body, { where: { notification_id } })
+        await Notification.update( { notification_status: 'seen' }, { where: { notification_id } })
         .then( _=>{
             res.status(200).json({
                 message: 'Notification mise à jour avec succès.'
