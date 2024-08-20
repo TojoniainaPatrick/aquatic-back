@@ -29,7 +29,7 @@ const initDb = async _=> {
 
     // one to many relationship  between user and notification
     User.hasMany( Notification, { foreignKey: 'notification_receiver', allowNull: false })
-    Notification.belongsTo( User, {foreignKey: 'notification_receiver', onDelete: 'CASCAD'})
+    Notification.belongsTo( User, { foreignKey: 'notification_receiver', onDelete: 'CASCAD' })
 
     await sequelize.sync()
     .then( async _=>{

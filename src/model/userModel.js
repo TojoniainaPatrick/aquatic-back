@@ -54,7 +54,7 @@ module.exports = ( sequelize, DataTypes ) => {
             },
             user_image_url: {
                 type: DataTypes.TEXT,
-                defaultValue: `${process.env.BASE_URL}images/defaultUserImage`
+                defaultValue: `${process.env.BASE_URL}images/defaultUserImage.png`
             },
             user_account_status: {
                 type: DataTypes.STRING,

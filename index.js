@@ -105,10 +105,10 @@ require('./src/routes/email/emailChecking')(app)
 
 
 // resource not found error handler
-// app.use(({res}) => {
-//     const message = `Impossible de trouver la ressource demandée! Vous pouvez essayer une autre URL. `
-//     res.status(404).json({message})
-// })
+app.use(({res}) => {
+    const message = `Impossible de trouver la ressource demandée! Vous pouvez essayer une autre URL. `
+    res.status(404).json({message})
+})
 
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`))
